@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://rohit123:rohit123@cluster0-2k9rb.mongodb.net/DevConnector?retryWrites=true&w=majority",
+    "jwtSecret": "RohitApp",
+    "githubClientID": "f0806df8fb50041d8fe2",
+    "githubClientSecret": "33deff223b8d832a3b3f42ca7a8ebd8b6023b7d9"
+}
