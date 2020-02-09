@@ -13,11 +13,6 @@ const app = express();
 connectDB();
 
 
-// // Basic request
-// app.get('/', (req, res) => {
-//     res.send('API Running')
-// })
-
 // Make express able to send jsona and read json // Init Middleware
 app.use(express.json({ extended: false }));
 
@@ -28,14 +23,14 @@ app.use('/api/posts', postsRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/profile', profileRouter);
 
-// Serve statc assets in production
+// Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
-    app.use(express.static('/client/build'));
+    app.use(express.static('client/build'));
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-    })
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
 }
 
 // Port Configurations
